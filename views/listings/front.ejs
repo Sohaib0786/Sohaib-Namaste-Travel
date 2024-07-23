@@ -1,0 +1,222 @@
+<%  layout("/layouts/boilerplate") %>
+
+<style>
+
+    body{
+      /*  background-color: rgb(206, 245, 130); */
+    
+      background-image: url("https://static.wanderon.in/wp-content/uploads/2023/11/top-min.jpg");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: 100% 100%;
+        display: flex;
+    
+        text-align: center;
+        
+        
+        
+    }
+
+  
+
+/*
+
+      .big{
+        height:500px;
+        width:1300px ;
+        background-image: url("https://static.wanderon.in/wp-content/uploads/2023/11/top-min.jpg");
+        background-repeat: no-repeat;
+        background-attachment:fixed ;
+        background-size: 100% 100%;
+        display: flex;
+
+*/
+        
+
+
+      
+
+      .divsmall{
+      display: flexbox;
+          flex-direction: column;
+          height:450px;
+          width: 65%;
+          color: aliceblue;
+          margin: auto;
+      }
+
+      /*
+      .divsmall1{
+        height: 500px;
+        width: 50%;
+        background-color: white;
+
+      }
+
+      .divsmall2{
+        height: 500px;
+        width: 35%;
+    
+
+       animation-name: imageAmination;
+       animation-duration: 2s;
+       animation-timing-function: ease-in;
+       animation-delay: 1s;
+       animation-iteration-count: infinite;
+       
+      }
+      */
+
+           @keyframes imageAnimation{
+            from{
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ys4Od95B8beF3vvI7sv624TSywsoDlzudBddd5_juVhlZmmaHDsjnah81Q&s');
+
+            }
+            to{
+                 background-image: url('https://images.unsplash.com/photo-1444211496661-a2f78323e039?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D');
+           }
+
+
+          }
+      .title {
+        height: 500px;
+        width: 50%;
+        
+    font-style: "Roboto";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+    font-size: 150px; 
+     font-weight:bold;
+     font-family: 'Roboto', sans-serif;
+     margin-left:30PX;
+      text-decoration: solid;
+  
+  
+         color:white;
+}
+
+
+#animate{display: flex;
+text-align: right;
+margin: auto;
+height: 150px;
+width: 350px;
+ color:white;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div class="big">
+
+            
+           <div class="divsmall">
+
+              
+        <div id="title">
+          
+            <div class="head1">
+              <h1> <b>WELCOME TO</b></h1>
+            </div>
+
+            <div class="head2">
+              <H1><b> OUR</b></H1>
+            </div>
+            
+            <H1>
+              <b>
+
+          <span id="element">
+
+             </span>
+             </b>
+</H1>
+          </div>
+
+
+
+              
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed('#element', {
+        strings: [" NAMASTE  "," TRAVEL"],
+        typeSpeed: 120,
+        backSpeed:120,
+        loop:true
+        
+      });
+    </script>
+
+                       
+
+         </div>
+
+
+
+
+
+
+          <div id="animate">         
+
+
+             
+          <div id="title">
+          
+          
+            
+            <H1>
+              <b>
+
+          <span id="element1">
+
+             </span>
+             </b>
+</H1>
+          </div>
+
+
+              
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed('#element1', {
+        strings: [" Come here to exlplore the world"],
+        typeSpeed: 120,
+        backSpeed:120,
+        loop:true
+        
+      });
+    </script>
+
+
+</div>
+
+
+
+
+         </div>
+
+
