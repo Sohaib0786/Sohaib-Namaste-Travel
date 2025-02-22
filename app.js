@@ -36,7 +36,9 @@ main().then(()=>{
 });  
 
 async function main() {
+
       await mongoose.connect(dbUrl);
+
 }
 
 
@@ -105,10 +107,6 @@ app.get("/", (req, res)=>{
 });
 
 */
-
-
-
-
 
 
 app.use("/listings",listingRouter);

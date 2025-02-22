@@ -9,7 +9,8 @@ module.exports.renderSignupForm=(req,res)=>{
 
 
 
-module.exports.signup=async(req,res)=>{     
+module.exports.signup=async(req,res)=>{
+     
     try{
      let {username, email, password}=req.body;
   
@@ -20,7 +21,7 @@ module.exports.signup=async(req,res)=>{
      if(err) {
        return next(err);
      }
-     req.flash("success","Welcome to Nameste Travel !");
+     req.flash("success","Welcome to Wanderlust !");
 
     res.redirect("/listings");
 
@@ -41,7 +42,7 @@ module.exports.renderLoginForm=(req,res)=>{
 
 
 module.exports.login=async (req,res)=>{
-    req.flash("success","Welcome back to Nameste Travel! ");
+    req.flash("success","Welcome back  to Wanderlust! ");
     let redirectUrl=res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
  } ;
