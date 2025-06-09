@@ -1,6 +1,5 @@
 
 ### **Project Title**: Namaste Travel – A Travel Booking and Management Platform
-
 ### **Description**:
 
 **Namaste Travel** is a full-stack web application developed using the **MERN stack**—**MongoDB**, **Express.js**, **React.js**, and **Node.js**—designed to streamline 
