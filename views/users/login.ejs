@@ -1,35 +1,126 @@
 <% layout("/layouts/boilerplate") %>
 
-      <div class="row mt-3">
-        <h2 class="col=6 offset-2">Login to Wanderlust</h2>
-            <div class="col-8 offset-2">
+  <style>
+    .login-container {
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-                <form action="/login" method="POST" class="needs-validation"  novalidate>
-                        <div class="mb-3">
-                        <lable for="username" class="form-label">Username</lable>
-                        <input
-                          name="username"
-                          id="username"
-                          type="text"
-                          class="form-control"
-                          required
-                          />
-                          
+    .login-card {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      width: 100%;
+      max-width: 450px;
+    }
 
-                        </div>
-                              
-                              <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input 
-                                 name="password"
-                                 id="password"
-                                 type="password"
-                                 class="form-control"
-                                   required
-                                    />
-                                
-                              </div>
-                              <button class="btn btn-success">Login</button>
-                      </form>
-            </div>
+    .login-title {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      padding: 0.6rem 0.75rem;
+    }
+
+    .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .login-footer a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <div class="container login-container">
+    <div class="login-card">
+
+      <h2 class="login-title">Login to Namaste Travel 🌍</h2>
+
+      <form action="/login" method="POST" class="needs-validation" novalidate>
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input name="username" id="username" type="text" class="form-control" placeholder="Enter your username"
+            required />
+          <div class="invalid-feedback">
+            Please enter your username.
+          </div>
         </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input name="password" id="password" type="password" class="form-control" placeholder="Enter your password"
+            required />
+          <div class="invalid-feedback">
+            Please enter your password.
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn btn-success login-btn">Login</button>
+
+      </form>
+
+      <div class="login-footer">
+        Don't have an account?
+        <a href="/signup">Sign up here</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Optional: Bootstrap validation script -->
+  <script>
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          'submit',
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          },
+          false
+        );
+      });
+    })();
+  </script>

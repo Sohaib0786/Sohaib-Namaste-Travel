@@ -1,238 +1,104 @@
-<%  layout("/layouts/boilerplate") %>
+<% layout("/layouts/boilerplate") %>
 
-<style>
-
-    body{
-      /*  background-color: rgb(206, 245, 130); 
-
-
-    body{
-      /*  background-color: rgb(206, 245, 130); */
-    
-      background-image: url("https://static01.nyt.com/images/2017/12/02/travel/360-7wondercomposite/360-7wondercomposite-videoSixteenByNineJumbo1600-v2.jpg");
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: 100% 100%;
-        display: flex;
-    
-        text-align: center;
-        
-        
-        
+  <style>
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)),
+        url("https://static01.nyt.com/images/2017/12/02/travel/360-7wondercomposite/360-7wondercomposite-videoSixteenByNineJumbo1600-v2.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
     }
 
+    .hero-content {
+      max-width: 800px;
+      padding: 20px;
+    }
 
-    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-  
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-top: 10px;
+      font-weight: 500;
+    }
 
-/*
+    .typed-text {
+      color: #2ecc71;
+    }
 
-      .big{
-        height:500px;
-        width:1300px ;
-        background-image: url("https://static.wanderon.in/wp-content/uploads/2023/11/top-min.jpg");
-        background-repeat: no-repeat;
-        background-attachment:fixed ;
-        background-size: 100% 100%;
-        display: flex;
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
 
-*/
-        
+    /* BUTTON */
+    .hero-btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      background-color: #2ecc71;
+      border: none;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
 
+    .hero-btn:hover {
+      background-color: #27ae60;
+      transform: translateY(-2px);
+    }
 
-      
-
-      .divsmall{
-      display: flexbox;
-          flex-direction: column;
-          height:450px;
-          width: 65%;
-          color: aliceblue;
-          margin: auto;
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
       }
 
-      /*
-      .divsmall1{
-        height: 500px;
-        width: 50%;
-        background-color: white;
-
+      .hero h2 {
+        font-size: 1.6rem;
       }
+    }
+  </style>
 
-      .divsmall2{
-        height: 500px;
-        width: 35%;
-    
+  <div class="hero">
+    <div class="hero-content">
+      <h1>WELCOME TO</h1>
 
-       animation-name: imageAmination;
-       animation-duration: 2s;
-       animation-timing-function: ease-in;
-       animation-delay: 1s;
-       animation-iteration-count: infinite;
-       
-      }
-      */
+      <h2>
+        <span class="typed-text" id="brandText"></span>
+      </h2>
 
-           @keyframes imageAnimation{
-            from{
-              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ys4Od95B8beF3vvI7sv624TSywsoDlzudBddd5_juVhlZmmaHDsjnah81Q&s');
+      <p>
+        Come here to explore the world with unforgettable journeys and
+        beautiful destinations.
+      </p>
 
-            }
-            to{
-                 background-image: url('https://images.unsplash.com/photo-1444211496661-a2f78323e039?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D');
-           }
+      <a href="/listings" class="btn hero-btn">
+        Explore Now 🌍
+      </a>
+    </div>
+  </div>
 
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-          }
-      .title {
-        height: 500px;
-        width: 50%;
-        
-    font-style: "Roboto";
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;    
-    font-size: 150px; 
-     font-weight:bold;
-     font-family: 'Roboto', sans-serif;
-     margin-left:30PX;
-      text-decoration: solid;
-  
-  
-         color:white;
-}
-
-
-#animate{display: flex;
-text-align: right;
-margin: auto;
-height: 150px;
-width: 350px;
- color:white;
-}
-
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         <div class="big">
-
-            
-           <div class="divsmall">
-
-              
-        <div id="title">
-          
-            <div class="head1">
-              <h1> <b>WELCOME TO</b></h1>
-            </div>
-
-            <div class="head2">
-              <H1><b> OUR</b></H1>
-            </div>
-            
-            <H1>
-              <b>
-
-          <span id="element">
-
-             </span>
-             </b>
-</H1>
-          </div>
-
-
-
-              
-    <!-- Load library from the CDN -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  
-    <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed('#element', {
-        strings: [" NAMASTE &nbsp; TRAVEL"],
-        typeSpeed: 120,
-        backSpeed:120,
-        loop:true
-        
-      });
-    </script>
-    
-
-                       
-
-         </div>
-
-
-
-         <style>
-            
-
-         </style>
-
-
-
-
-
-
-          <div id="animate">         
-
-
-             
-          <div id="title2">
-          
-          
-            
-            <H1>
-              <b>
-
-          <span id="element1">
-
-             </span>
-             </b>
-</H1>
-          </div>
-
-
-              
-    <!-- Load library from the CDN -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  
-    <!-- Setup and start animation! -->
-
-    <script>
-      var typed = new Typed('#element1', {   
-        strings: [" Come here to exlplore the world"],
-        typeSpeed: 120,
-        backSpeed:120,
-        loop:true
-        
-      });
-    </script>
-
-
-</div>
-
-
-
-
-         </div>
-
-
+  <script>
+    new Typed("#brandText", {
+      strings: ["NAMASTE TRAVEL ✈️", "YOUR TRAVEL PARTNER 🌎"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true,
+    });
+  </script>

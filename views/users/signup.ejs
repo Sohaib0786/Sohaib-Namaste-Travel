@@ -1,46 +1,112 @@
 <% layout("/layouts/boilerplate") %>
 
-      <div class="row mt-3">
-        <h2 class="col=6 offset-2">SignUp on Wanderlust</h2>
-            <div class="col-8 offset-2">
+  <style>
+    .signup-container {
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-                <form action="/signup" method="POST" class="needs-validation"  novalidate>
-                        <div class="mb-3">
-                        <lable for="username" class="form-label">Username</lable>
-                        <input
-                          name="username"
-                          id="username"
-                          type="text"
-                          class="form-control"
-                          required
-                          />
-                          <div class="valid-feedback">Looks good!</div>
+    .signup-card {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      width: 100%;
+      max-width: 450px;
+    }
 
-                        </div>
-                              <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input 
-                                 name="email"
-                                 id="email"
-                                 type="email"
-                                 class="form-control"
-                                   required
-                                    />
-                              
+    .signup-title {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
 
-                              </div>
-                              <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input 
-                                 name="password"
-                                 id="password"
-                                 type="password"
-                                 class="form-control"
-                                   required
-                                    />
-                                
-                              </div>
-                              <button class="btn btn-success">SignUp</button>
-                      </form>
-            </div>
+    .form-label {
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      padding: 0.6rem 0.75rem;
+    }
+
+    .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .signup-footer {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .signup-footer a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signup-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <div class="container signup-container">
+    <div class="signup-card">
+
+      <h2 class="signup-title">Sign Up on Namaste Travel 🌍</h2>
+
+      <form action="/signup" method="POST" class="needs-validation" novalidate>
+
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input name="username" id="username" type="text" class="form-control" placeholder="Enter your username"
+            required />
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
         </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email" required />
+          <div class="invalid-feedback">
+            Please provide a valid email.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input name="password" id="password" type="password" class="form-control"
+            placeholder="Create a strong password" required />
+          <div class="invalid-feedback">
+            Password is required.
+          </div>
+        </div>
+
+        <button class="btn btn-success signup-btn">
+          Create Account
+        </button>
+
+      </form>
+
+      <div class="signup-footer">
+        Already have an account?
+        <a href="/login">Login here</a>
+      </div>
+
+    </div>
+  </div>
