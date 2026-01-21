@@ -32,7 +32,7 @@ module.exports.signup = async (req, res, next) => {
       if (err) return next(err); // Pass error to next middleware
 
       // Success flash message
-      req.flash("success", "Welcome to Wanderlust!");
+      req.flash("success", "Welcome to Namaste travel!");
 
       // Redirect to listings page
       res.redirect("/listings");
@@ -63,7 +63,7 @@ module.exports.renderLoginForm = (req, res) => {
 module.exports.login = async (req, res, next) => {
   try {
     // Success flash message
-    req.flash("success", "Welcome back to Wanderlust!");
+    req.flash("success", "Welcome back to Namaste Travel!");
 
     // Redirect to previous page if available, otherwise to listings
     const redirectUrl = res.locals.redirectUrl || "/listings";
